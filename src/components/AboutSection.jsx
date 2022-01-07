@@ -1,7 +1,8 @@
 // Import Images
 import home1 from "../img/home1.png";
-// Style
+// Styles
 import styled from "styled-components";
+import { AboutSC, DescriptionSC, ImageSC, HideSC } from "../styles";
 
 const AboutSection = () => {
 	return (
@@ -32,34 +33,5 @@ const AboutSection = () => {
 		</AboutSC>
 	);
 };
-
-// Styled Components
-const AboutSC = styled.div`
-	min-height: 90vh;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 5rem 10rem;
-	color: white;
-`;
-const DescriptionSC = styled.div`
-	flex: 1;
-	padding-right: 5rem;
-	h2 {
-		font-weight: lighter;
-	}
-`;
-const ImageSC = styled.div`
-	flex: 1;
-	overflow: hidden;
-	img {
-		width: 100%;
-		height: 80vh;
-		object-fit: cover;
-	}
-`;
-const HideSC = styled.div`
-	overflow: hidden;
-`;
 
 export default AboutSection;
