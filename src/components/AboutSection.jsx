@@ -1,26 +1,28 @@
 // Import Images
 import home1 from "../img/home1.png";
 // Styles
-import styled from "styled-components";
+//import styled from "styled-components";
 import { AboutSC, DescriptionSC, ImageSC, HideSC } from "../styles";
+// Framer Motion
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
 	return (
 		<AboutSC>
 			<DescriptionSC>
-				<div className="title">
+				<motion.div>
 					<HideSC>
-						<h2>We work to make</h2>
+						<motion.h2>We work to make</motion.h2>
 					</HideSC>
 					<HideSC>
-						<h2>
+						<motion.h2>
 							your <span>dreams</span> come
-						</h2>
+						</motion.h2>
 					</HideSC>
 					<HideSC>
-						<h2>true.</h2>
+						<motion.h2>true.</motion.h2>
 					</HideSC>
-				</div>
+				</motion.div>
 				<p>
 					Contact us for any photograph or videography ideas that you have. We
 					have professionals with amazing skills to help you achieve it.

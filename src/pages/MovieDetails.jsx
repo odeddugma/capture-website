@@ -15,8 +15,6 @@ const MovieDetails = () => {
 		setMovie(currentMovie[0]);
 	}, [movies, url]);
 
-	if (movie) console.log(movie);
-
 	return (
 		<MovieDetailsSC>
 			{movie && (
