@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+// Import animations
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
 // Import Images
 import athlete from "../img/athlete-small.png";
@@ -8,7 +11,13 @@ import goodtimes from "../img/goodtimes-small.png";
 
 const OurWork = () => {
 	return (
-		<WorkSC>
+		<WorkSC
+			variants={pageAnimation}
+			initial="hidden"
+			animate="show"
+			exit="exit"
+			style={{ background: "#fff" }}
+		>
 			<MovieSC>
 				<h2>The Athelete</h2>
 				<div className="line"></div>
@@ -34,7 +43,7 @@ const OurWork = () => {
 	);
 };
 
-const WorkSC = styled.div`
+const WorkSC = styled(motion.div)`
 	min-height: 100vh;
 	overflow: hidden;
 	padding: 5rem 10rem;
