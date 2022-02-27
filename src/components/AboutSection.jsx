@@ -6,6 +6,24 @@ import { AboutSC, DescriptionSC, ImageSC, HideSC } from "../styles";
 // Framer Motion
 import { motion } from "framer-motion";
 
+/* // Framer Motion Variants
+const titleAnim = {
+	hidden: { opacity: 0 },
+	show: { opacity: 1, transition: { duration: 3 } },
+};
+const containerAnim = {
+	hidden: { x: 100 },
+	show: {
+		x: 0,
+		transition: {
+			duration: 3,
+			ease: "easeOut",
+			staggerChildren: 1,
+			when: "afterChildren",
+		},
+	},
+}; */
+
 const AboutSection = () => {
 	return (
 		<AboutSC>
