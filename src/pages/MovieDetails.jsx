@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 import { MovieState } from "../movieState";
+// Animations
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
 const MovieDetails = () => {
 	const location = useLocation();
@@ -16,7 +19,12 @@ const MovieDetails = () => {
 	}, [movies, url]);
 
 	return (
-		<MovieDetailsSC>
+		<MovieDetailsSC
+			variants={pageAnimation}
+			initial="hidden"
+			animate="show"
+			exit="exit"
+		>
 			{movie && (
 				<>
 					<HeadlineSC>
@@ -41,7 +49,7 @@ const MovieDetails = () => {
 	);
 };
 
-const MovieDetailsSC = styled.div`
+const MovieDetailsSC = styled(motion.div)`
 	color: white;
 `;
 const HeadlineSC = styled.div`
